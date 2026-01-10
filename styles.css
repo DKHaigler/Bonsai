@@ -178,6 +178,12 @@ img {
     color: #00b289;
 }
 
+.nav-button.inverted:hover {
+    background-color: #00b289;
+    color: #fff;
+
+}
+
 .w-button {
     display: inline-block;
     padding: 9px 15px;
@@ -880,6 +886,8 @@ img {
 .accordion.pricingpage {
     margin-right: 9%;
     margin-left: 9%;
+    cursor: pointer;
+
 }
 
 .accordion {
@@ -890,7 +898,11 @@ img {
     background-attachment: scroll;
     font-size: 25px;
     line-height: 30px;
-    cursor: pointer;
+}
+
+.accordion.pricingpage:hover {
+    color: #00a881;
+    
 }
 
 @media screen and (max-width: 975px) {
@@ -907,13 +919,14 @@ img {
 }
 
 .panel.pricingpage {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
     margin-right: 9%;
     margin-left: 9%;
 }
 
-.panel {
-    display: none;
+.panel.pricingpage.open {
+    max-height: 500px;
 }
 
 p {
@@ -984,15 +997,6 @@ p {
     align-items: flex-start;
 }
 
-.footer-link {
-    margin-bottom: 1px;
-    color: #4c4d5f;
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 300;
-    letter-spacing: .11px;
-    text-decoration: none;
-}
 
 .sub-title {
     margin-bottom: 10px;
@@ -1024,13 +1028,6 @@ p {
     letter-spacing: .11px;
     text-decoration: none;
 }
-.dropdown {
-    margin-right: 20px;
-    color: #4c4d5f;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 600;
-}
 
 
 .dropdown-footer-trigger {
@@ -1039,7 +1036,13 @@ p {
 }
 
 .dropdown-footer-list {
-    display: none;
+    display: block;
+    overflow: hidden;
+    height: 0px;
+}
+
+.dropdown-footer-list.open {
+    height: auto;
 }
 
 .hidden {
@@ -1049,3 +1052,4 @@ p {
 .opacity {
     opacity: .65;
 }
+
