@@ -452,6 +452,7 @@ img {
     border-radius: 200px;
     background-color: #01b289;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .toggle-ball {
@@ -461,7 +462,13 @@ img {
     margin-left: 2px;
     border-radius: 200px;
     background-color: #fff;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.toggle-ball.active {
+    transform: translate(22px);
+}
+
 
 .z-index-2 {
     position: relative;
@@ -469,9 +476,7 @@ img {
 }
 
 .yearly-text {
-    opacity: .65;
-    color: #4c4d5f;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     letter-spacing: 1.22px;
     text-transform: uppercase;
@@ -505,7 +510,7 @@ img {
 }
 
 .pricing-yearly {
-    display: none;
+    display: flex;
     padding-top: 40px;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1035,4 +1040,12 @@ p {
 
 .dropdown-footer-list {
     display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.opacity {
+    opacity: .65;
 }
