@@ -32,6 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     })
 
+    //Unlink tags
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+        });
+    });
    
 
 
